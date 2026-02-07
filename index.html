@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine 💖</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+function saveAsPDF(q1, q2, q3, q4) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const today = new Date().toISOString().split("T")[0];
+
+    doc.setFont("Helvetica", "bold");
+    doc.setFontSize(18);
+    doc.text("💌 Valentine Quiz Answers 💌", 20, 25);
+
+    doc.setFontSize(12);
+    doc.setFont("Helvetica", "normal");
+
+    let y = 45;
+
+    doc.text(`1. When do I find you most irresistible? 😌`, 20, y);
+    doc.text(q1 || "—", 30, y + 8);
+
+    y += 25;
+    doc.text(`2. What outfit of mine makes you go: “Yep… that’s my wife” 😏`, 20, y);
+    doc.text(q2 || "—", 30, y + 8);
+
+    y += 25;
+    doc.text(`3. What’s one thing I do that instantly puts you in a romantic mood? 💖`, 20, y);
+    doc.text(q3 || "—", 30, y + 8);
+
+    y += 25;
+    doc.text(`4. What’s one thing you KNOW I pretend not to notice… but I totally do? 👀😂`, 20, y);
+    doc.text(q4 || "—", 30, y + 8);
+
+    y += 30;
+    doc.setFont("Helvetica", "italic");
+    doc.text("❤️ Forever your Valentine ❤️", 20, y);
+
+    doc.save(`Valentine_Answers_${today}.pdf`);
+}
+</script>
+
+</head>
+<body>
+
+<h1>Will You Be My Valentine? 💌</h1>
+<p>Answer the quiz to find out! 💖</p>
+
+<div id="quiz">
+<div class="question">
+<label>1. When do I find you most irresistible? 😌</label><br>
+<input type="text" id="q1" placeholder="Type your answer">
+</div>
+<div class="question">
+<label>2. What outfit of mine makes you go: “Yep… that’s my wife” 😏</label><br>
+<input type="text" id="q2" placeholder="Type your answer">
+</div>
+<div class="question">
+<label>3. What’s one thing I do that instantly puts you in a romantic mood? 💖</label><br>
+<input type="text" id="q3" placeholder="Type your answer">
+</div>
+<div class="question">
+<label>4. What’s one thing you KNOW I pretend not to notice… but I totally do? 👀😂 </label><br>
+<input type="text" id="q4" placeholder="Type your answer">
+</div>
+<button onclick="checkAnswers()">Submit ❤️</button>
+</div>
+
+<div id="result"></div>
+<img id="surprise" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Valentine Surprise ❤️">
+
+<audio id="valentineSound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+
+</body>
+<script src="script.js"></script>
+</html>
+
+</body>
+</html>
