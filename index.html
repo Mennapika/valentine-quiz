@@ -22,19 +22,19 @@ function saveAsPDF(q1, q2, q3, q4) {
 
     let y = 45;
 
-    doc.text(`1. When do I find you most irresistible? 😌`, 20, y);
+    doc.text(`1. What small habit of mine secretly makes you smile? 😊`, 20, y);
     doc.text(q1 || "—", 30, y + 8);
 
     y += 25;
-    doc.text(`2. What outfit of mine makes you go: “Yep… that’s my wife” 😏`, 20, y);
+    doc.text(`2. Is there a song that reminds you of me?🎵❤️`, 20, y);
     doc.text(q2 || "—", 30, y + 8);
 
     y += 25;
-    doc.text(`3. What’s one thing I do that instantly puts you in a romantic mood? 💖`, 20, y);
+    doc.text(`3. What food reminds you of me? 🍕🍰`, 20, y);
     doc.text(q3 || "—", 30, y + 8);
 
     y += 25;
-    doc.text(`4. What’s one thing you KNOW I pretend not to notice… but I totally do? 👀😂`, 20, y);
+    doc.text(`4. What’s one silly memory of us that still makes you laugh? 📸`, 20, y);
     doc.text(q4 || "—", 30, y + 8);
 
     y += 30;
@@ -53,28 +53,28 @@ function saveAsPDF(q1, q2, q3, q4) {
 
 <div id="quiz">
 <div class="question">
-<label>1. When do I find you most irresistible? 😌</label><br>
+<label>1. What small habit of mine secretly makes you smile? 😊</label><br>
 <input type="text" id="q1" placeholder="Type your answer">
 </div>
 <div class="question">
-<label>2. What outfit of mine makes you go: “Yep… that’s my wife” 😏</label><br>
+<label>2. Is there a song that reminds you of me?🎵❤️</label><br>
 <input type="text" id="q2" placeholder="Type your answer">
 </div>
 <div class="question">
-<label>3. What’s one thing I do that instantly puts you in a romantic mood? 💖</label><br>
+<label>3. What food reminds you of me? 🍕🍰</label><br>
 <input type="text" id="q3" placeholder="Type your answer">
 </div>
 <div class="question">
-<label>4. What’s one thing you KNOW I pretend not to notice… but I totally do? 👀😂 </label><br>
+<label>4. What’s one silly memory of us that still makes you laugh? �</label><br>
 <input type="text" id="q4" placeholder="Type your answer">
 </div>
 <button onclick="checkAnswers()">Submit ❤️</button>
 </div>
 
 <div id="result"></div>
-<img id="surprise" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Valentine Surprise ❤️">
+<img id="surprise" src="https://media1.tenor.com/m/5SyFGsqOtooAAAAd/tom-and-jerry-amor.gif" alt="Valentine Surprise ❤️">
 
-<audio id="valentineSound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+<audio id="valentineSound" src="https://www.soundjay.com/human/sounds/heartbeat-01.mp3"></audio>
 
 </body>
 <script src="script.js"></script>
